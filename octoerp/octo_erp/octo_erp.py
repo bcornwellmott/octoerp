@@ -32,17 +32,18 @@ def octopart_lookup(sq_number):
 				for item_result in result['items']:
 					if item_result['manufacturer']['name'] == mfg:
 					
+						no_seller = 0
 						for offer in item_result['offers']:
 							if offer['seller']['name'] == supplier:
-				
+								no_seller = 1
 								if sq.currency in offer['prices']:
 									for qty_rate in offer['prices'][sq.currency]:
 										if qty_rate[0] <= item.qty:
 											item.rate = qty_rate[1]
 								else:
 									frappe.msgprint("Cannot find quoted price in {0}".format(sq.currency))
-							else:
-								frappe.msgprint("Cannot find seller")
+						if no_seller:
+							frappe.msgprint("Cannot find seller")
 		if item.rate > 0:
 			frappe.msgprint("Best rate that {0} supplies item {1} at is {2}".format(sq.supplier, item.item_code,item.rate))
 	sq.save()
