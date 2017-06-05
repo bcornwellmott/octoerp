@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include octoerp *.css
+recursive-include octoerp *.csv
+recursive-include octoerp *.html
+recursive-include octoerp *.ico
+recursive-include octoerp *.js
+recursive-include octoerp *.json
+recursive-include octoerp *.md
+recursive-include octoerp *.png
+recursive-include octoerp *.py
+recursive-include octoerp *.svg
+recursive-include octoerp *.txt
+recursive-exclude octoerp *.pyc
