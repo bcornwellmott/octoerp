@@ -12,7 +12,7 @@ def octopart_lookup(sq_number):
 	# Get the api key from settings
 	
 	sq = frappe.get_doc('Supplier Quotation', sq_number)
-	supplier = frappe.get_value('Supplier',sq.supplier,'octopart_seller_name') or sq.name
+	supplier = frappe.get_value('Supplier',sq.supplier,'octopart_seller_name') or sq.supplier
 	for item in sq.items:
 		mfg, mfg_pn = frappe.get_value('Item', item.item_code, ['manufacturer','manufacturer_part_no'])
 		
