@@ -21,6 +21,8 @@ To implement, add this to your custom script for 'Supplier Quotation':
 			});
 		}
 	});
+	
+The system will only look up items in a supplier quotation where the manufacturer's part number has been set.
 		
 You also need to set up your API key in Octo-ERP Settings. 
 There is a custom field in each supplier (under Additional Information) where you should plug 
