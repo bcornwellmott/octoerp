@@ -22,6 +22,12 @@ To implement, add this to your custom script for 'Supplier Quotation':
 		}
 	});
 		
+You also need to set up your API key in Octo-ERP Settings. 
+There is a custom field in each supplier (under Additional Information) where you should plug 
+in the supplier's Octopart Name (this may be different from the supplier name you have entered). 
+You can look up the formatting of this name in the Settings field.
+
+=
 #### License
 
 MIT
