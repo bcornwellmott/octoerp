@@ -76,7 +76,7 @@ app_license = "MIT"
 
 # Fixtures
 # --------
-fixtures = ["Custom Field"]
+fixtures = [{"doctype":"Custom Field", "filters": [["name", "=", "Supplier-octopart_seller_name"]]}]
 
 # Document Events
 # ---------------
